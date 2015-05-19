@@ -1,0 +1,837 @@
+/*Global*/
+$bg_color: #fffdf4;
+$primary_font: #101010;
+$primary_fontbg: white;
+$hover_color: black;
+$font_style: "Ubuntu", "Heiti SC", "Helvetica Neue", "Droidsansfallback", "Segoe UI", "Microsoft YaHei", Helvetica, Arial, \5FAE\8F6F\96C5\9ED1, sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background: #FFFFCF;
+}
+
+::-moz-selection {
+    background: #FFFFCF;
+}
+
+html {
+	font-size:100%
+}
+
+body {
+    font-family: $font_style;
+	font-weight: lighter;
+    font-size: 1.2em;
+    color: #444;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration:none;
+    color: black;
+    transition: color linear 0.2s;
+}
+
+a:hover {
+	transition: all linear 0.4s;
+    color: lighten($hover_color, 50%);
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 2em;
+    font-family: $font_style;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2em;
+    color: #222;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #222;
+}
+
+h4 {
+    font-size: 1.3em;
+    color: #222;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    margin: 1em 0;
+}
+
+del {
+    color: #999;
+}
+
+.container {
+	clear: both;
+	line-height: 2.5em;
+	width: 76%;
+	margin: auto;
+	list-style: none;
+}
+
+.center-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#instantclick-bar {
+  background: gray;
+}
+
+/*------------------*/
+/*----- header -----*/
+/*------------------*/
+.header-wrap {
+    width: 100%;
+
+    .header {
+        overflow: hidden;
+
+        h1{
+            text-align:center;
+            font-size: 4em;
+            color: black;
+            margin: 4rem 0 4rem;
+            a:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.container {
+	border-top: solid 1px #eee;
+	border-bottom: solid 1px #eee;
+	ul {
+		text-align: center;
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0 1em;
+		}
+	}
+}
+
+/*-------------------*/
+/*----- Content -----*/
+/*-------------------*/
+.content-wrap {
+    margin-top: 50px;
+
+    .content pre {
+        border: none;
+        background: #101010;
+        border-top: 1px solid #E0E0E0;
+        border-bottom: 1px solid #E0E0E0;
+        margin: 1.2em -2px;
+        padding: 15px 20px;
+        font-size: 13px;
+        font-family: $font_style;
+        line-height: 2.2;
+        display: block;
+        overflow: auto;
+        max-width: 800px;
+    }
+}
+
+.continue-reading {
+	clear: both;
+	line-height: 2em;
+	margin: 0 0 4em;
+	list-style: none;
+	text-align: center;
+	a {
+	font-weight: normal;
+	padding: 0.4em 1.2em 0.4em 1.2em;
+	border-radius: 3px;
+	border-bottom: 1px dotted #D0D0D0;
+	}
+	a:hover {
+		background-color: #F0F0F0;
+		color: black;
+	}
+}
+/*----- Post -----*/
+.post {
+    line-height: 1.6;
+    margin-bottom: 2em;
+    word-break: nowrap;
+
+    .title {
+        font-size: 1.5em;
+        color: $primary_font;
+        font-weight: normal;
+		text-align: center;
+    }
+	.container{
+		border-top: none;
+		border-bottom: none;
+		text-align: center;
+		.date {
+			font-size: 1em;
+			color: #999;
+		}
+	}
+
+    .abstract-content{
+        margin-top: 10px;
+        line-height: 1.8;
+        color: #666;
+    }
+
+    .tags {
+        font-size: 0.8em;
+        color: #888;
+
+        a {
+            color: #888;
+            border-bottom: dotted 1px #888;
+            margin-left: 10px;
+            transition: all linear 0.4s;
+            -webkit-transition: all linear 0.4s;
+            -moz-transition: all linear 0.4s;
+
+            &:hover {
+                color: $hover_color;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+
+    .post-body{
+
+        ul {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        ol {
+            margin: 1em 0;
+            padding-left: 2em;
+        }
+
+        ul li, ol li {
+            margin: 0.5em 0;
+            position: relative;
+            font-size: 0.9em;
+        }
+
+        ul p, ol p{
+            overflow: visible;
+        }
+
+        code, pre {
+            font-family: Monaco, Andale Mono, Courier New, monospace;
+        }
+
+        pre code{
+            font-size: 14px;
+        }
+
+        code {
+            border-radius: 5px;
+            margin: 0 2px;
+            padding: 0px 5px;
+            color: #C8C8C8;
+        }
+
+        a {
+            color: $primary_font;
+			background-color: $primary_fontbg;
+            -webkit-transition: all linear 0.4s;
+            -moz-transition: all linear 0.4s;
+            transition: all linear 0.4s;
+
+            &:hover {
+                color: $hover_color;
+            }
+        }
+
+        table {
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 1em 0;
+          width: 100%;
+          max-width: 100%;
+          border-width: 1px; border-style: solid;
+          background-color: transparent; }
+
+          table, table tr, table tr td, table tr th{ border-color: #e5e5e5; } 
+          table th{ color: #666666; background-color: #fdfdfd; } 
+          tr th{ border-bottom-width: 1px; border-bottom-style: solid; text-align: left; }
+          tr th, tr td{ padding: 5px 20px; border-right: 1px solid; font-size: 1.6rem; }
+          tr th:last-child, tr td:last-child{ border-right: 0px; }
+          table th{ font-weight: bold; }
+          table tbody > tr:nth-child(odd) > td,
+          table tbody > tr:nth-child(odd) > th {
+              background-color: #f9f9f9; }
+
+        blockquote {
+            position: relative;
+            line-height: 1.2em;
+            background: $bg_color;
+            padding: 0.1em 1.5em 0.1em 1.5em;
+
+            &:before {
+                position: absolute;
+                top: 33px;
+                left: -25px;
+                content: "\201C";
+                font-size: 7em;
+                color: #ddd;
+            }
+
+             p {
+                line-height: 1.8;
+
+            }
+        }
+
+    }
+}
+
+.placeholder {
+    clear:both;
+    height:4em;
+}
+
+.pagenation {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 95%;
+    font-weight: bold;
+    letter-spacing: .1em;
+    .pre {
+          float: left;
+      }
+      .next {
+          float: right;
+      }
+      a {
+        color: #D0D0D0;
+        &:hover {
+            color: #777;
+        }
+    }
+}
+
+
+#gotop {
+    display: none;
+    position: fixed;
+    right: 0.2em;
+    bottom: 0.2em;
+    padding: 0 0.5em;
+    font-size: 1.4em;
+    background: transparent;
+    color: #d6d6d6;
+    cursor: pointer;
+    border-radius: 4px;
+    &:hover {
+        color: #777;
+        transition: 0.4s;
+    }
+}
+
+.ref-post{
+
+    .title{
+        a {
+            position: relative;
+            color: #333;
+            -webkit-transition: color linear .4s;
+            -moz-transition: color linear .4s;
+            transition: color linear .4s;
+        }
+
+        span {
+            font-size: 0.6em;
+            color: #E60900;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+/*----- Home page Post -----*/
+.link-title-post{
+    .title{
+        a{
+            position: relative;
+            font-family: $font_style;
+            color: $primary_font;
+            -webkit-transition: color linear 0.2s;;
+            -moz-transition: color linear 0.2s;;
+            transition: color linear 0.2s;
+        }
+        a:hover{
+			transition: color linear 0.2s;
+			color: lighten($hover_color, 50%);
+        }
+    }
+
+    .post-body {
+        font-size: 1.0em;
+        color: #555;
+    }
+
+}
+
+
+
+/*----- Post page Post -----*/
+.normal-post{
+    .title {
+        position: relative;
+        margin-top: 0;
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 1.1;
+        font-family: $font_style;
+
+    }
+
+    .post-body {
+        margin-top: 30px;
+        margin-bottom: 2em;
+        font-size: 1.1em;
+
+        p {
+            margin: 1.5em 0;
+            text-align: justify;
+			a {
+				padding: 0.1em 0.2em;
+				background-color: #E0E0E0;
+				border-radius: 4px;
+			}
+        }
+
+    }
+}
+
+.other_posts {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    height: 4em;
+    overflow: hidden;
+    line-height: 4em;
+    font-size: 1.0em;
+    position: relative;
+    margin-bottom: 3em;
+
+    a{
+        &:hover{
+            background: #eee;
+        }
+    }
+    .pre {
+        position: absolute;
+        text-align: left;
+        width: 50%;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        border-right: 1px solid #eee;
+        span{
+            margin-left: 1.5em;
+        }
+    }
+    .next {
+        position: absolute;
+        text-align: right;
+        width: 50%;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        span{
+            margin-right: 1.5em;
+        }
+    }
+}
+
+#load-disqus {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid gray;
+  margin: 0 auto;
+  border-radius: 4px;
+  display: block;
+  padding: 0 16px;
+  line-height: 2.8;
+  &:hover {
+    transition: all linear 0.4s;
+    background: #F0F0F0;
+    }
+}
+
+/*----- responsive for small screen ----- */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .post {
+        line-height: 1.6;
+        margin-bottom: 55px;
+    }
+
+    .post.normal-post{
+        .title {
+            font-size: 2em;
+            line-height: 1.2;
+
+            .perman-link {
+                font-size: 0.8em;
+                color: #E60900;
+                position: absolute;
+                left: 0;
+                top: -1em;
+            }
+        }
+    }
+}
+
+.comments {
+	margin-top: 4em;
+}
+
+/*----- archive page -----*/
+.archive-list {
+    list-style: none;
+
+    .year {
+        margin-left: 120px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        color: #222;
+    }
+
+    .post-set {
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        .date {
+            display: block;
+            float: left;
+            width: 100px;
+        }
+
+        .post-link {
+            margin-left: 120px;
+            overflow: hidden;
+        }
+    }
+
+    .refer-link {
+        font-size: 0.9em;
+        color: #888;
+
+        span {
+            font-size: 0.7em;
+        }
+    }
+
+    a {
+        -webkit-transition: all linear 0.4s;
+        -moz-transition: all linear 0.4s;
+        transition: all linear 0.4s;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary_font;
+        }
+    }
+
+}
+
+/*----- syntax color from farbox basis.css -----*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+        .center-container {
+            width: 80%;
+        }
+}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+        .center-container {
+            width: 90%;
+        }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+        .center-container {
+            width: 90%;
+        }
+}
+
+@media only screen 
+and (min-device-width : 1280px) {
+        .center-container {
+            width: 50%;
+        }
+}
+
+.codehilite code, .codehilite pre {
+  word-break: nowrap;
+  color: #fdce93;
+  background-color: #3f3f3f;
+  padding: 10px;
+  border-radius: 3px; }
+
+  .codehilite .hll {
+    background-color: #222; }
+
+    .codehilite .c {
+      color: #7f9f7f; }
+
+      .codehilite .err {
+        color: #e37170;
+        background-color: #3d3535; }
+
+        .codehilite .g {
+          color: #7f9f7f; }
+
+          .codehilite .k {
+            color: #f0dfaf; }
+
+            .codehilite .l {
+              color: #ccc; }
+
+              .codehilite .n {
+                color: #dcdccc; }
+
+                .codehilite .o {
+                  color: #f0efd0; }
+
+                  .codehilite .x {
+                    color: #ccc; }
+
+                    .codehilite .p {
+                      color: #41706f; }
+
+                      .codehilite .cm {
+                        color: #7f9f7f; }
+
+                        .codehilite .cp {
+                          color: #7f9f7f; }
+
+                          .codehilite .c1 {
+                            color: #7f9f7f; }
+
+                            .codehilite .cs {
+                              color: #cd0000;
+                              font-weight: bold; }
+
+                              .codehilite .gd {
+                                color: #cd0000; }
+
+                                .codehilite .ge {
+                                  color: #ccc;
+                                  font-style: italic; }
+
+                                  .codehilite .gr {
+                                    color: red; }
+
+                                    .codehilite .gh {
+                                      color: #dcdccc;
+                                      font-weight: bold; }
+
+                                      .codehilite .gi {
+                                        color: #00cd00; }
+
+                                        .codehilite .go {
+                                          color: gray; }
+
+                                          .codehilite .gp {
+                                            color: #dcdccc;
+                                            font-weight: bold; }
+
+                                            .codehilite .gs {
+                                              color: #ccc;
+                                              font-weight: bold; }
+
+                                              .codehilite .gu {
+                                                color: purple;
+                                                font-weight: bold; }
+
+                                                .codehilite .gt {
+                                                  color: #0040D0; }
+
+                                                  .codehilite .kc {
+                                                    color: #dca3a3; }
+
+                                                    .codehilite .kd {
+                                                      color: #ffff86; }
+
+                                                      .codehilite .kn {
+                                                        color: #dfaf8f;
+                                                        font-weight: bold; }
+
+                                                        .codehilite .kp {
+                                                          color: #cdcf99; }
+
+                                                          .codehilite .kr {
+                                                            color: #cdcd00; }
+
+                                                            .codehilite .kt {
+                                                              color: #00cd00; }
+
+                                                              .codehilite .ld {
+                                                                color: #cc9393; }
+
+                                                                .codehilite .m {
+                                                                  color: #8cd0d3; }
+
+                                                                  .codehilite .s {
+                                                                    color: #cc9393; }
+
+                                                                    .codehilite .na {
+                                                                      color: #9ac39f; }
+
+                                                                      .codehilite .nb {
+                                                                        color: #efef8f; }
+
+                                                                        .codehilite .nc {
+                                                                          color: #efef8f; }
+
+                                                                          .codehilite .no {
+                                                                            color: #ccc; }
+
+                                                                            .codehilite .nd {
+                                                                              color: #ccc; }
+
+                                                                              .codehilite .ni {
+                                                                                color: #c28182; }
+
+                                                                                .codehilite .ne {
+                                                                                  color: #c3bf9f;
+                                                                                  font-weight: bold; }
+
+                                                                                  .codehilite .nf {
+                                                                                    color: #efef8f; }
+
+                                                                                    .codehilite .nl {
+                                                                                      color: #ccc; }
+
+                                                                                      .codehilite .nn {
+                                                                                        color: #8fbede; }
+
+                                                                                        .codehilite .nx {
+                                                                                          color: #ccc; }
+
+                                                                                          .codehilite .py {
+                                                                                            color: #ccc; }
+
+                                                                                            .codehilite .nt {
+                                                                                              color: #9ac39f; }
+
+                                                                                              .codehilite .nv {
+                                                                                                color: #dcdccc; }
+
+                                                                                                .codehilite .ow {
+                                                                                                  color: #f0efd0; }
+
+                                                                                                  .codehilite .w {
+                                                                                                    color: #ccc; }
+
+                                                                                                    .codehilite .mf {
+                                                                                                      color: #8cd0d3; }
+
+                                                                                                      .codehilite .mh {
+                                                                                                        color: #8cd0d3; }
+
+                                                                                                        .codehilite .mi {
+                                                                                                          color: #8cd0d3; }
+
+                                                                                                          .codehilite .mo {
+                                                                                                            color: #8cd0d3; }
+
+                                                                                                            .codehilite .sb {
+                                                                                                              color: #cc9393; }
+
+                                                                                                              .codehilite .sc {
+                                                                                                                color: #cc9393; }
+
+                                                                                                                .codehilite .sd {
+                                                                                                                  color: #cc9393; }
+
+                                                                                                                  .codehilite .s2 {
+                                                                                                                    color: #cc9393; }
+
+                                                                                                                    .codehilite .se {
+                                                                                                                      color: #cc9393; }
+
+                                                                                                                      .codehilite .sh {
+                                                                                                                        color: #cc9393; }
+
+                                                                                                                        .codehilite .si {
+                                                                                                                          color: #cc9393; }
+
+                                                                                                                          .codehilite .sx {
+                                                                                                                            color: #cc9393; }
+
+                                                                                                                            .codehilite .sr {
+                                                                                                                              color: #cc9393; }
+
+                                                                                                                              .codehilite .s1 {
+                                                                                                                                color: #cc9393; }
+
+                                                                                                                                .codehilite .ss {
+                                                                                                                                  color: #cc9393; }
+
+                                                                                                                                  .codehilite .bp {
+                                                                                                                                    color: #efef8f; }
+
+                                                                                                                                    .codehilite .vc {
+                                                                                                                                      color: #efef8f; }
+
+                                                                                                                                      .codehilite .vg {
+                                                                                                                                        color: #dcdccc; }
+
+                                                                                                                                        .codehilite .vi {
+                                                                                                                                          color: #ffffc7; }
+
+                                                                                                                                          .codehilite .il {
+                                                                                                                                            color: #8cd0d3; }
+
+                                                                                                                                            @media (max-width: 480px) {
+                                                                                                                                              code {
+                                                                                                                                                padding: 0;
+                                                                                                                                                margin: 0;   }
+}

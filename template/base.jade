@@ -1,0 +1,39 @@
+html(lang="zh-Hans")
+	head
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		title
+			block title
+				site.title
+		load("/service/static_3rd/staticfile/ajax/libs/normalize/3.0.3/normalize.min.css /template/style.scss /service/static_3rd/staticfile/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
+	body
+		.header-wrap
+			.header.center-container
+				h1.title
+					a(href='/')= site.title
+		.container
+				ul.nav
+					li
+						a(href="/") Home
+					li
+						a(href="/archive") Archive
+					li
+						a(href="/about.md") About
+					li
+						a(href="/links.md") Links
+		.content-wrap
+			.content.center-container
+				block content
+		#gotop(title="返回顶部")
+			i.fa.fa-caret-up.fa-2x
+		.placeholder
+		.container
+			ul.nav
+				li
+					a(target='_blank', href="https://creativecommons.org/licenses/by-nc/4.0/")© 语の国
+				li
+					a(target='_blank', href="https://yu.gg/post/farbox-theme-object-0") 0号工程
+
+		script(defer, type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		script(type="text/javascript", src="/service/static_3rd/staticfile/ajax/libs/instantclick/3.0.1/instantclick.min.js", data-no-instant)
+		script(data-no-instant) InstantClick.init();
+
