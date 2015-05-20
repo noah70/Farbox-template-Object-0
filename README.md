@@ -22,7 +22,7 @@
   下载后，用template文件夹替换原有的文件
   
 2. 直接克隆<br/>
-  前往[克隆地址](https://yu.gg/template)直接克隆。如果勾选了Auto Update，，代码会跟着一起自动更新。
+  前往[克隆地址](https://yu.gg/template)直接克隆。如果勾选了Auto Update，代码会跟着一起自动更新。
   
 因为主题在不断更新，可能会出现未知问题。
   
