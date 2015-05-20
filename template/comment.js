@@ -1,6 +1,6 @@
 var disqus = {
   load : function disqus(){
-      var disqus_shortname = 'yugg';
+      var disqus_shortname = 'disqus_shortname_here';
       if(typeof DISQUS !== 'object') {
         (function () {
         var s = document.createElement('script'); s.async = true;
