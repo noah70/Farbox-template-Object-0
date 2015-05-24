@@ -27,7 +27,7 @@ html {
 body {
     font-family: $font_style;
 	font-weight: lighter;
-    font-size: 1.2em;
+    font-size: 18px;
     color: #444;
 	overflow-x: hidden;
 }
@@ -156,6 +156,12 @@ del {
     }
 }
 
+.post-date {
+    line-height: 2.5em;
+    text-align: center;
+    font-size: 14px;
+}
+
 .continue-reading {
 	clear: both;
 	line-height: 2em;
@@ -177,7 +183,6 @@ del {
 .post {
     line-height: 1.6;
     margin-bottom: 2em;
-    word-break: nowrap;
 
     .title {
         font-size: 1.5em;
@@ -578,7 +583,7 @@ del {
 
 }
 
-/*----- syntax color and mobile/tablet optimize -----*/
+/*----- syntax color from farbox basis.css -----*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {

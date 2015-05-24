@@ -12,7 +12,7 @@ block content
 			.post.link-title-post
 				h2.title
 					a(href=post.url)= post.title
-				.container.span.date= post.date.format('%B %d, %Y')
+				.post-date= post.date.format('%B %d, %Y')
 				.post-body.abstract-content= post.content.opening or post.content.limit(400)
 			.continue-reading
 				a(href=post.url) Continue reading
