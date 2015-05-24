@@ -38,3 +38,4 @@
 * [CSS禅意花园](http://www.amazon.cn/CSS%E7%A6%85%E6%84%8F%E8%8A%B1%E5%9B%AD-%E7%BE%8E-Dave-Shea%E3%80%80Molly-E-Holzschlag/dp/B00LITFG88/ref=sr_1_59?s=digital-text&ie=UTF8&qid=1429958335&sr=1-59)
 * [Normalize.css](https://github.com/necolas/normalize.css/)
 * [FortAwesome](https://github.com/FortAwesome/Font-Awesome)
+* [Jimmy同学提供的评论延迟加载](https://gist.github.com/CaiJimmy/84dead2d2919af05fede)
