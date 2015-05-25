@@ -4,7 +4,7 @@ block title
 block content
 	.post.normal-post
 		h1.title= post.title
-		.post-date= post.date.format('%B %d, %Y')
+		.span-date= post.date.format('%B %d, %Y')
 		if post.tags
 			p.tags Tags:
 				for tag in post.tags

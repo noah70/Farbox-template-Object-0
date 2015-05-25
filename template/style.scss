@@ -156,7 +156,7 @@ del {
     }
 }
 
-.post-date {
+.span-date {
     line-height: 2.5em;
     text-align: center;
     font-size: 14px;
@@ -583,7 +583,10 @@ del {
 
 }
 
-/*----- syntax color from farbox basis.css -----*/
+/*--------------------------------------------*/
+/*----- responsive for different screens -----*/
+/*--------------------------------------------*/
+/*for pad*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
@@ -592,6 +595,7 @@ and (max-device-width : 1024px) {
         }
 }
 
+/*for phone*/
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 667px) {
@@ -600,6 +604,7 @@ and (max-device-width : 667px) {
         }
 }
 
+/*for phone*/
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
@@ -608,13 +613,15 @@ and (max-device-width : 568px) {
         }
 }
 
+/*for PC*/
 @media only screen 
 and (min-device-width : 1280px) {
         .center-container {
-            width: 50%;
+            width: 720px;
         }
 }
 
+/*----- syntax color from farbox basis.css -----*/
 .codehilite code, .codehilite pre {
   word-break: nowrap;
   color: #fdce93;
