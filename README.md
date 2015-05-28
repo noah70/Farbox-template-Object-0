@@ -14,7 +14,7 @@
 - **布局**<br/>
   单栏。响应式设计，使用在不同的平台浏览时会出现不同的页面宽度以适应阅读。
 - **评论** <br/>
-  javascript延迟加载。请修改comment.js下的disqus_shortname_here为你自己的disqus ID。
+  javascript延迟加载。请修改comment.js下的`disqus_shortname_here`为你自己的disqus ID。
 
 ### 安装
 
