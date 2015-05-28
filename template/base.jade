@@ -1,6 +1,9 @@
 html(lang="zh-Hans")
 	head
-		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		meta(name="HandheldFriendly", content="True")
+		meta(name="renderer", content="webkit")
+		meta(http-equiv="X-UA-Compatible", content="IE=Edge")
 		title
 			block title
 				site.title
@@ -27,7 +30,7 @@ html(lang="zh-Hans")
 		.container
 			ul.nav
 				li
-					a(target='_blank', href="https://creativecommons.org/licenses/by-nc/4.0/")© 语の国
+					a(target='_blank', href="https://creativecommons.org/licenses/by-nc/4.0/")= '© ' + site.title
 				li
 					a(target='_blank', href="https://yu.gg/post/farbox-theme-object-0") 0号工程
 
