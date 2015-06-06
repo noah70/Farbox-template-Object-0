@@ -16,6 +16,9 @@
 - **评论** <br/>
   javascript延迟加载。请修改comment.js下的`disqus_shortname_here`为你自己的disqus ID。
 
+### 其他
+- 可以在Farbox的编辑器中使用`<!--more-->`标签截断文章，以保持首页的整洁。
+
 ### 安装
 
 1. 从Github下载<br/>
