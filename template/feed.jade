@@ -1,24 +1,20 @@
 doctype xml
-rss(version='2.0',
-    xmlns:content='http://purl.org/rss/1.0/modules/content/',
-    xmlns:wfw='http://wellformedweb.org/CommentAPI/',
-    xmlns:dc='http://purl.org/dc/elements/1.1/'
-    xmlns:atom='http://www.w3.org/2005/Atom')
-  channel
-    title= site.title
-	link= 'https://' + 'yu.gg/'
-	description= site.title
-    atom:link(href=request.host + '/feed', rel='self', type='application/rss+xml')
-	language zh-Hans
++set_content_type('application/xml')
+feed(xmlns="http://www.w3.org/2005/Atom")
+	title= site.title
+	description= site.content.escaped
+	link(href="https://yu.gg/")
+	link(ref="self", href="http://yanyu.farbox.com/feed")
+	id= site._id
 	if posts
-		lastBuildDate= posts[0]['date'].strftime('%a, %d %b %Y %H:%M:%S +0800')
-		pubDate= posts[0]['date'].strftime('%a, %d %b %Y %H:%M:%S +0800')
-		
+		updated= posts[0]['date'].strftime('%Y-%m-%dT%H:%M:%SZ')
 	for post in posts
-		item
+		entry
+			post_url = 'https://' + 'yu.gg' + post.url.escaped
 			title= post.title.escaped
-			link= 'https://' + 'yu.gg' + post.url.escaped
-			guid= 'https://' + 'yu.gg' + post.url.escaped
-			pubDate= post.date.strftime('%a, %d %b %Y %H:%M:%S +0800')
-			description= '请前往原文地址查看详细内容'
-			dc:creator= 'Yu'
+			link(href=post_url, rel="alternate")
+			updated= post.date.strftime('%Y-%m-%dT%H:%M:%SZ')
+			id= post.url_path.escaped
+			author
+				name= "Yu"
+			summary(type="html")= '请前往原文查看详细内容'
